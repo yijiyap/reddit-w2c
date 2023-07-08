@@ -42,9 +42,6 @@ class RedditSearch:
                     image_url = source['u']
                     if caption_link == 'Caption link not available':
                         continue
-                    self.reddit_posts[i] = [submission.title, caption, caption_link, image_url]
+                    self.reddit_posts[i] = {'title': submission.title, 'caption': caption, 'caption_link' : caption_link, 'image_url' : image_url}
                     i += 1
                     break
-
-b = RedditSearch(user_input)
-print(b.reddit_posts)

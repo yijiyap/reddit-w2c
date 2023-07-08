@@ -22,8 +22,8 @@
                 <button type="submit" class="border-2 border-black my-2" @click="handleSearch">Search</button>
             </div>
         </form>
-        <div v-if="output">
-            <p>Output: {{ output }}</p>
+        <div v-if="output" v-for="post in output" :key="post">
+            <Post :post="post" />
         </div>
     </div>
 </template>
